@@ -1,11 +1,11 @@
-import { createServer, Model } from "miragejs";
+import { createServer, Model } from "miragejs"
 
 export function makeServer({ environment = "test" } = {}) {
   let server = createServer({
     environment,
 
     models: {
-      user: Model
+      user: Model,
     },
 
     seeds(server) {
@@ -19,7 +19,7 @@ export function makeServer({ environment = "test" } = {}) {
       this.get("/users", (schema) => {
         return schema.users.all()
       })
-    }
+    },
   })
 
   return server
