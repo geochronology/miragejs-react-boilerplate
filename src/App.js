@@ -17,10 +17,12 @@ export default function App() {
   }, [])
 
   return (
-    <ul>
-      {users.map((user, idx) => (
-        <li data-testid={`user-${idx + 1}`} key={user.id}>{user.name}</li>
-      ))}
-    </ul>
+    <div className="App-header">
+      <ul>
+        {users.map((user, idx) => (
+          <li data-testid={`user-${idx + 1}`} key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </div>
   )
 }
