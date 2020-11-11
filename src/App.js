@@ -18,8 +18,8 @@ export default function App() {
 
   return (
     <ul>
-      {users.map((user) => (
-        <li key={user.id}>{user.name}</li>
+      {users.map((user, idx) => (
+        <li data-testid={`user-${idx + 1}`} key={user.id}>{user.name}</li>
       ))}
     </ul>
   )
